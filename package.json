@@ -1,0 +1,15 @@
+{
+  "name": "ticket-bot",
+  "version": "1.0.0",
+  "description": "Create a ticket for you and the staff to solve the problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "darrenefecto",
+  "license": "ISC",
+  "dependencies": {
+    "all": "0.0.0",
+    "discord.js": "^11.5.1"
+  }
+}
