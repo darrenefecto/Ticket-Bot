@@ -97,7 +97,7 @@ client.on("message",async message=>{
                 .addField("?ticket delete","Issue is solved? then you can delete the channel with ticket delete")
                 .addField("creator:","darrenefecto")
                 .setColor('#32cd32');
-            message.author.send(help);
+            message.channel.send(help);
             break;
         default:
             break;
