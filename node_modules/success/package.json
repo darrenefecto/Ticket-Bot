@@ -1,0 +1,31 @@
+{
+  "name": "success",
+  "version": "0.1.0",
+  "description": "Success/failure handler for Node.js callbacks",
+  "main": "success.js",
+  "scripts": {
+    "test": "node test/success.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rjrodger/success.git"
+  },
+  "keywords": [
+    "seneca",
+    "project",
+    "plugin"
+  ],
+  "author": "Richard Rodger (http://richardrodger.com)",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "peerDependencies": {
+  },
+  "devDependencies": {
+  },
+  "files": [
+    "README.md",
+    "LICENSE.txt",
+    "success.js"
+  ]
+}

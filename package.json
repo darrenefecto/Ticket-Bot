@@ -4,12 +4,11 @@
   "description": "Create a ticket for you and the staff to solve the problem",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node."
   },
-  "author": "darrenefecto",
-  "license": "ISC",
+  "author": "darrenefecto#4662",
+  "license": "GPL-3.0 license",
   "dependencies": {
-    "all": "0.0.0",
-    "discord.js": "^11.5.1"
+    "discord.js": "^12.5.3"
   }
 }
