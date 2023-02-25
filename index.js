@@ -28,14 +28,14 @@ client.on("message", async message => {
     var arg = message.content.toLowerCase().split(" ");
     try {
 
-        if(arg[0]!='?ticket') return;
+        if(arg[0]!='t!') return;
         if(!message.guild.me.hasPermission("MANAGE_CHANNELS")||!message.guild.me.hasPermission("MANAGE_ROLES")){
             message.channel.send("Not enough permissions I require the `MANAGE_CHANNELS` and `MANAGE_ROLES` permission!");
             return;
         }
-        const TicketCategory = message.guild.channels.cache.find(c => c.type === 'category' && c.name.toLowerCase() === 'Open Tickets');
+        const TicketCategory = message.guild.channels.cache.find(c => c.type === 'category' && c.name.toLowerCase() === 'open tickets');
 
-        if(!TicketCategory) return message.reply("Please create a `Open Tickets` category.");
+        if(!TicketCategory) return message.reply("Please create a **Open Tickets** category.");
         if(TicketCategory == null || !TicketCategory) {
             await message.guild.channels.create('Open Tickets', {
                 type: 'category',
@@ -50,7 +50,7 @@ client.on("message", async message => {
         switch (arg[1]) {
             case "create":
                 if(arg.length<=2){
-                    message.reply("Incorrect usage! pls type `?ticket create (reason)`");
+                    message.reply("Incorrect usage! pls type `t! create (reason)`");
                     return;
                 }
                 let reason = arg.slice(2).join(" ");
@@ -124,8 +124,8 @@ client.on("message", async message => {
                 const help = new Discord.MessageEmbed()
                     .setTitle("Hello "+message.author.username+"!")
                     .setDescription("How to create a ticket? Use the commands in any channel of the discord server.")
-                    .addField("?ticket create <reason>","Create a private channel with you and staff to solve to issuse together!")
-                    .addField("?ticket delete","Issue is solved? then you can delete the channel with ticket delete")
+                    .addField("t! create <reason>","Create a private channel with you and staff to solve to issuse together!")
+                    .addField("t! delete","Issue is solved? then you can delete the channel with ticket delete")
                     .addField("creator:","darrenefecto")
                     .setColor('#32cd32');
                 message.channel.send(help);
