@@ -33,7 +33,7 @@ client.on("message", async message => {
             message.channel.send("Not enough permissions I require the `MANAGE_CHANNELS` and `MANAGE_ROLES` permission!");
             return;
         }
-        const TicketCategory = message.guild.channels.cache.find(c => c.type === 'category' && c.name.toLowerCase() === 'Open Tickets');
+        const TicketCategory = message.guild.channels.cache.find(c => c.type === 'category' && c.name.toLowerCase() === 'open tickets');
 
         if(!TicketCategory) return message.reply("Please create a `Open Tickets` category.");
         if(TicketCategory == null || !TicketCategory) {
